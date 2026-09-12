@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        a {
+            display: inline-block;
+            padding: 4px 4px;
+        }
+    </style>
+   
+  <meta charset="UTF-8">
+  <title>Perfil de Sebastian</title>
+  <meta name="description" content="Perfil personal de Juan Sebastian Betancur, técnico con experiencia especificamente en programación.">
+
+  <meta property="og:title" content="Perfil de Sebastian">
+  <meta property="og:description" content="Página de perfil personal de Sebastian con biografía, formación, habilidades y formulario de contacto.">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="https://via.placeholder.com/150">
+  <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>Perfil de Juan Sebastian Betancur</h1>
+    <p>Amante por el desarrollo web, movil y el diseño</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#formacion">Formación</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>Profesional en programación especificamente Java y diseño, me gusta mucho adquirir nuevos conocimientos y aprender a optimizar procesos ya que es algo muy necesario.</p>
+      <figure>
+        <img src="imagen.jpg" alt="Foto de perfil de Sebastian">
+        <figcaption>Sebastian - Desarrollador y diseñador</figcaption>
+      </figure>
+    </section>
+
+
+    <section id="formacion">
+      <h2>Formación</h2>
+      <table>
+        <caption>Mi formación académica</caption>
+        <thead>
+          <tr>
+            <th>Institución</th>
+            <th>Título</th>
+            <th>Año</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Universidad de Caldas</td>
+            <td>Tecnologia en Sistemas informaticos</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>Universidad Catolica</td>
+            <td>Certificación en operaciones de servicios turisticos y hoteleria</td>
+            <td>2024</td>
+          </tr>
+          <tr>
+            <td>Universidad de Antioquia</td>
+            <td>Diplomado en diseño</td>
+            <td>2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <h3>Tecnologías que domino</h3>
+      <ul>
+        <li>HCI</li>
+        <li>SQL</li>
+        <li>Java</li>
+        <li>HTML</li>
+      </ul>
+
+      <h3>Top 3 de aprendizajes para este semestre</h3>
+      <ol>
+        <li>Kotlin</li>
+        <li>Git</li>
+        <li>Diseño</li>
+      </ol>
+    </section>
+
+   
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required minlength="3">
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="asunto">Asunto:</label>
+        <select id="asunto" name="asunto" required>
+          <option value="">Seleccione un asunto</option>
+          <option value="consulta">Consulta</option>
+          <option value="proyecto">Proyecto</option>
+          <option value="colaboracion">Colaboración</option>
+        </select>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required minlength="10"></textarea>
+
+        <label>
+          <input type="checkbox" name="aceptacion" required>
+          Acepto el tratamiento de datos personales
+        </label>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Correo: sebastianbetancur93@example.com</p>
+  </footer>
+</body>
+</html>
