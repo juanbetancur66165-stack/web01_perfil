@@ -1,0 +1,45 @@
+Experimento 1
+¿qué pasa con las tarjetas sobrantes en cada caso?
+Con Flexbox, la tarjeta sobrante se acomoda en la siguiente fila y puede ocupar un espacio diferente, 
+con Grid, las tarjetas mantienen columnas más organizadas y alineadas.
+ ¿Cuál te da columnas perfectamente alineadas entre filas?
+ Grid, porque organiza los elementos utilizando filas y columnas,
+ Esto hace que las tarjetas queden mejor alineadas entre sí.
+¿En qué situación preferirías el comportamiento de flex? 
+Usaría Flexbox cuando necesito organizar elementos principalmente en una sola dirección, como una barra de navegación.
+
+Experimento 2
+¿qué propiedad centra horizontalmente antes y cuál después? Escribe la regla con tus palabras: justify-content trabaja 
+sobre el eje ______ y align-items sobre el ______. Este es el concepto que más se olvida de Flexbox.
+Antes, justify-content: center centra horizontalmente. Después de usar flex-direction: column,
+ align-items es la que permite centrar horizontalmente.
+
+
+
+Experimento 3
+¿por qué una sola palabra puede ensanchar una columna entera?
+Porque si la palabra es demasiado larga y no tiene espacios para hacer un salto de línea,
+ el navegador intenta mantenerla completa y puede aumentar el ancho de la columna.
+ ¿Cuál de las tres soluciones te dejó el mejor resultado visual?
+La que me dio mejor resultado fue overflow-wrap: break-word,
+ porque permite dividir palabras largas y evita que el contenido se salga de la tarjeta.
+
+
+Experimento 4
+¿cuántas líneas de HTML tocaste?
+No tuve que modificar ninguna línea de HTML, Solamente cambié las propiedades
+de grid-template-columns y grid-template-areas.
+¿Qué implicaría hacer lo mismo con float o con posicionamiento absoluto?
+Sería más complicado porque tendría que controlar manualmente las posiciones y tamaños,
+ Con Grid es más fácil cambiar la distribución de la página.
+
+Experimento 5 
+qué diferencia ves en el borde de afuera y entre las tarjetas? 
+Con margin, cada tarjeta tiene espacio alrededor, incluso cerca de los bordes,
+ Con gap, el espacio se aplica solamente entre las tarjetas.
+¿Cuál de los dos te obliga a escribir reglas de excepción para el primero y el último elemento?
+margin puede necesitar reglas adicionales para quitar el espacio del primer o último elemento,
+ Con gap no es necesario porque solo controla la separación entre los elementos.
+
+
+
