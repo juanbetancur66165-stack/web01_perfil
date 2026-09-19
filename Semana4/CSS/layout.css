@@ -1,0 +1,224 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr auto;
+
+  grid-template-areas:
+    "cabecera cabecera"
+    "filtros resultados"
+    "pie pie";
+
+  gap: 0;
+}
+
+
+.cabecera {
+  grid-area: cabecera;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  padding: 20px 30px;
+  background-color: #e8f0fe;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #222;
+  white-space: nowrap;
+}
+
+.buscador {
+  flex: 1;
+  max-width: 600px;
+
+  padding: 10px 14px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+nav {
+  margin-left: auto;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+
+.filtros {
+  grid-area: filtros;
+
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background-color: #f1f1f1;
+}
+
+.filtros h2 {
+  margin-top: 0;
+}
+
+.filtros fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin: 0;
+  padding: 15px;
+}
+
+.filtros label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.resultados {
+  grid-area: resultados;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+
+  padding: 24px;
+
+  background-color: #fff;
+}
+
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.tarjeta h3 {
+  margin: 15px 0 8px;
+}
+
+.tarjeta p {
+  margin: 6px 0;
+}
+
+.tarjeta .precio {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tarjeta button {
+  margin-top: auto;
+
+  padding: 10px;
+  border: 0;
+  border-radius: 6px;
+
+  cursor: pointer;
+  font-size: 15px;
+}
+
+
+.pie {
+  grid-area: pie;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  padding: 25px 30px;
+
+  background-color: #eeeeee;
+}
+
+.pie div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pie h4 {
+  margin: 0 0 5px;
+}
+
+.pie a {
+  color: #333;
+  text-decoration: none;
+}
+
+
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto auto 1fr auto;
+
+    grid-template-areas:
+      "cabecera"
+      "filtros"
+      "resultados"
+      "pie";
+  }
+
+  .cabecera {
+    flex-wrap: wrap;
+  }
+
+  .buscador {
+    order: 3;
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  .filtros {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .pie {
+    grid-template-columns: 1fr;
+  }
+}

@@ -41,5 +41,3 @@ Con margin, cada tarjeta tiene espacio alrededor, incluso cerca de los bordes,
 margin puede necesitar reglas adicionales para quitar el espacio del primer o último elemento,
  Con gap no es necesario porque solo controla la separación entre los elementos.
 
-
-
