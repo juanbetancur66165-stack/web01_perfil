@@ -1,0 +1,352 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+
+  grid-template-areas:
+    "cabecera"
+    "contenido"
+    "lateral"
+    "pie";
+
+  gap: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cabecera {
+  grid-area: cabecera;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 20px;
+  background-color: #e8f0fe;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #222;
+  white-space: nowrap;
+}
+
+.buscador {
+  width: 100%;
+  max-width: none;
+
+  padding: 10px 14px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+nav {
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  width: 100%;
+}
+
+.menu a {
+  display: block;
+  width: 100%;
+
+  padding: 10px;
+
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+
+  border-radius: 6px;
+}
+
+.menu a:hover {
+  background-color: #d5e4ff;
+}
+
+.filtros {
+  grid-area: lateral;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background-color: #f1f1f1;
+}
+
+.filtros h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.filtros fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin: 0;
+  padding: 15px;
+
+  min-width: 0;
+}
+
+.filtros label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  min-width: 0;
+}
+
+.filtros input[type="number"] {
+  width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+
+.filtros input[type="checkbox"],
+.filtros input[type="radio"] {
+  width: auto;
+  flex-shrink: 0;
+}
+
+.resultados {
+  grid-area: contenido;
+
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  padding: 20px;
+
+  background-color: #fff;
+}
+
+.tarjeta {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta img {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 3 / 2;
+  height: auto;
+
+  object-fit: cover;
+
+  border-radius: 6px;
+}
+
+.tarjeta h3 {
+  margin: 15px 0 8px;
+
+  overflow-wrap: anywhere;
+}
+
+.tarjeta p {
+  margin: 6px 0;
+
+  overflow-wrap: anywhere;
+}
+
+.tarjeta .precio {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tarjeta button {
+  margin-top: auto;
+
+  width: 100%;
+
+  padding: 10px;
+  border: 0;
+  border-radius: 6px;
+
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.pie {
+  grid-area: pie;
+
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  padding: 25px 20px;
+
+  background-color: #eeeeee;
+}
+
+.pie div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  min-width: 0;
+}
+
+.pie h4 {
+  margin: 0 0 5px;
+}
+
+.pie a {
+  color: #333;
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* TABLET */
+
+@media (min-width: 768px) {
+
+  .cabecera {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 20px 30px;
+  }
+
+  .logo {
+    flex-shrink: 0;
+  }
+
+  .buscador {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+  }
+
+  nav {
+    width: auto;
+    margin-left: auto;
+  }
+
+  .menu {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .menu li {
+    width: auto;
+  }
+
+  .menu a {
+    width: auto;
+    padding: 8px 12px;
+  }
+
+  .filtros {
+    padding: 24px;
+  }
+
+  .resultados {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 24px;
+  }
+
+  .pie {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+
+    padding: 25px 30px;
+  }
+}
+
+
+/* ESCRITORIO */
+
+@media (min-width: 1024px) {
+
+  body {
+    grid-template-columns: 250px minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr) auto;
+
+    grid-template-areas:
+      "cabecera cabecera"
+      "lateral contenido"
+      "pie pie";
+  }
+
+  .cabecera {
+    padding: 20px 30px;
+  }
+
+  .filtros {
+    height: 100%;
+    padding: 24px;
+  }
+
+  .resultados {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 24px;
+  }
+}

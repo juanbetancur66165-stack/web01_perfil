@@ -9,13 +9,15 @@
   <title>Resultados — MiTienda</title>
 
   <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/layout_2.css">
 </head>
 
 <body>
+  <!--Al probar la página en 375 px se observa que el sidebar ocupa demasiado espacio, el header 
+  puede desbordarse, el menú tiene poco espacio y las tarjetas de productos pueden quedar muy demasiado pequeñas.-->
 
   <header class="cabecera">
 
-    <!-- Logo -->
     <a class="logo" href="#">MiTienda</a>
 
     <input
@@ -47,13 +49,10 @@
 
   </header>
 
-
   <aside class="filtros">
 
     <h2>Filtros</h2>
 
-
-    <!-- Categorías -->
     <fieldset id="categorias">
 
       <legend>Categoría</legend>
@@ -64,7 +63,6 @@
           name="cat"
           value="tecnologia"
         >
-        Tecnología
       </label>
 
       <label>
@@ -73,7 +71,6 @@
           name="cat"
           value="hogar"
         >
-        Hogar
       </label>
 
       <label>
@@ -82,7 +79,6 @@
           name="cat"
           value="ropa"
         >
-        Ropa
       </label>
 
     </fieldset>
