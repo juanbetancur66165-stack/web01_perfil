@@ -1,0 +1,86 @@
+Parte A · Teórico-práctica (50%)
+1. HTTP y la web
+(a) El código 404 quiere decir que el servidor recibió la solicitud, pero no encontró la página
+ o archivo que se estaba buscando. Normalmente esto pasa porque la dirección o la ruta no es correcta.
+(b) Primero revisaría en DevTools la URL que está dando el error y después la compararía 
+con la ubicación real del archivo en el proyecto y con la ruta que está escrita en el HTML o CSS.
+
+2. HTML semántico
+
+Código original:
+
+<div class="top"><div class="logo">Mi blog</div></div>
+<div class="links"> ...</div>
+<div class="post"><div class="titulo-grande">Mi viaje</div><p>...</p></div>
+
+Código corregido:
+
+<header><h1>Mi blog</h1></header>
+<nav>...</nav>
+<article><h2>Mi viaje</h2><p>...</p></article>
+
+Justificaciones:
+
+Usé <h1> para el título principal porque es el título más importante de la página y debe estar dentro 
+del encabezado.
+Usé <nav> para los enlaces porque esta etiqueta se utiliza para organizar los enlaces de navegación
+ de una página.
+3. Especificidad CSS
+
+Reglas:
+
+p { color: black; }              /* (0,0,1) */
+#zona p { color: green; }        /* (1,0,1) */
+.destacado { color: orange; }    /* (0,1,0) */
+p.destacado { color: purple; }   /* (0,1,1) */
+
+Elemento:
+<div id="zona"><p class="destacado">Texto</p></div>
+(a) El color final es verde, porque la regla #zona p tiene mayor especificidad que las demás.
+(b) Si se elimina #zona p, gana la regla p.destacado, por lo que el texto quedaría de color morado.
+4. Box model
+Datos:
+
+width: 300px;
+padding: 24px;
+border: 2px solid;
+margin: 16px;
+
+(a) Con content-box:
+
+El ancho sería:
+
+300 + 24 + 24 + 2 + 2 = 352px
+
+Por lo tanto, el ancho total es 352px.
+
+(b) Con border-box:
+
+El ancho total sería 300px, porque el padding y el borde quedan incluidos dentro del ancho.
+Justificación: Usaría border-box porque hace más fácil controlar los tamaños de los elementos, 
+especialmente cuando se hace un diseño adaptable a diferentes pantallas.
+5. Flexbox vs Grid
+
+Propuesta A – Flexbox:
+
+.grilla {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.tarjeta {
+    flex: 1 1 250px;
+}
+
+Propuesta B – Grid:
+
+.grilla {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+(a) Una diferencia que se puede ver es que con Flexbox algunas filas pueden quedar con diferentes
+ tamaños o desalineadas. En cambio, Grid organiza mejor las filas y columnas.
+(b) Para hacer una grilla uniforme usaría Grid, porque permite organizar mejor las columnas
+ y también se adapta fácilmente a diferentes tamaños de pantalla.
